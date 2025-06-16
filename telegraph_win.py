@@ -89,9 +89,13 @@ class Telegraph_Window(tk.Frame):
 			title='Сохранить как',
 			filetypes = [('Audio files','*.mp3'),('All files','*.*')]
 			)
-		self.beeper.record_to_audio()
-		self.beeper.save('telegraph1')
-		
+		if file_path:
+			self.beeper.record_to_audio()
+			self.beeper.save(file_path)
+		else:
+			print("Файл не выбран")
+			
+	""" Переводит текст в звук кода Морзе """	
 	def transform(self):
 		self.beeper.text_to_morse(self.message_text.get_text())
 		
