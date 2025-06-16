@@ -190,17 +190,3 @@ if __name__ == '__main__':
 	
 	
 	
-	'''
-	должно определять слова кода в сообщении и выводить посимвольно
-	
-	input()
-	sos = '... ___ ...     ...   ___   ...     ...   ___   ...'
-	print("")
-	sym_mes = ''	
-	for i in range(len(sos) ):
-		sym_mes += morse_code.code_abc[sos[i]]
-	print(sym_mes)
-	'''
-#	beep.pause(3)
-
-
