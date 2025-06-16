@@ -141,7 +141,7 @@ class Beeper:
 	"""
 	def save(self, file_name = 'morse_code', extens = 'mp3'):
 		# cохраняем в файл
-		fh = self.audio.export('./sounds/{0}.{1}'.format(file_name, extens), format = 'mp3')
+		fh = self.audio.export('{0}.{1}'.format(file_name, extens), format = 'mp3')
 		
 		
 		
