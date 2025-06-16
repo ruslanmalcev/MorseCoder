@@ -1,1 +1,1 @@
-# MorseCoder
+Запустить скрипт main_win.py
