@@ -139,9 +139,9 @@ class Beeper:
 	""" 
 		Сохраняет в файл
 	"""
-	def save(self, file_name = 'morse_code', extens = 'mp3'):
+	def save(self, file_name = 'morse_code'):
 		# cохраняем в файл
-		fh = self.audio.export('{0}.{1}'.format(file_name, extens), format = 'mp3')
+		fh = self.audio.export('{0}'.format(file_name), format = 'mp3')
 		
 		
 		
