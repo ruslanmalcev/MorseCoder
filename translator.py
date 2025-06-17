@@ -87,9 +87,13 @@ class Translator:
 
 				if tmp[i+1] == ' ': # следующий пробел, то конец символа 
 			# сравнить со словарём и добавить в сообщение
-					message += morse_code.c_abc[symbol]	
+					try:
+						message += morse_code.c_abc[symbol]	
 					# новая буква
-					symbol = ''		
+						symbol = ''
+					except KeyError:
+						message += symbol
+						symbol = ''		
 				continue		
 				 
  		# если текущий пробел
