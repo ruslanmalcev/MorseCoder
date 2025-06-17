@@ -71,6 +71,30 @@ class Text_Sound_Window(tk.Frame):
 		# вывести код Морзе в окно
 		with open('cache.txt', 'r') as file:
 			text = file.read()
+			
+			#print(text)			
+			num = []
+			a = 0
+			for i in range(1,len(text)):
+				if text[i] == ' ':
+					a+=1
+				else:
+					num.append(a)
+					a = 0
+
+			m = min(num)
+			
+			s = ''
+			for i in range(len(text)):
+				if text[i]!=' ':
+					s+=text[i]
+				elif text[i] == ' ':
+					a+=1
+					if text[i+1] != ' ':
+						s += ' '*round(a/m)
+						a = 0
+			text = s
+			
 			self.morse_window.set_text(text)
 			
 		# перевести код Морзе в буквы
